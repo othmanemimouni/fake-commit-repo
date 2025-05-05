@@ -21,5 +21,7 @@ for i in "${!letters[@]}"; do
   git add file.txt
 
   commit_date="$year-01-01T12:00:00"
+
+  git commit --date="$commit_date" -m "Commit $letter"
   GIT_COMMITTER_DATE="$commit_date" git commit --date="$commit_date" -m "Commit $letter"
 done
